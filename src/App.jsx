@@ -13,6 +13,8 @@ import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
+import EditProfile from './pages/EditProfile';
+import ViewBookings from './pages/ViewBookings';
 
 const App = () => {
   return (
@@ -32,7 +34,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/favorites" element={<Favorites />} />
-          
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/bookings" element={<ViewBookings />} />
         </Routes> 
       </MainLayout>
     </Router>
