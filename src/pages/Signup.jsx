@@ -180,12 +180,12 @@ const Signup = () => {
   const handleFacebookSignup = () => {
     alert('Facebook signup clicked');
   };
-
+ console.log(credentials);
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-100 to-blue-200 px-4">
       <div className="w-full max-w-md bg-white shadow-2xl rounded-xl p-8 animate-fade-in">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Create Your Account</h2>
-
+         
         {/* Social Buttons */}
         <div className="space-y-3 mb-6">
           <button
@@ -232,6 +232,7 @@ const Signup = () => {
               value={credentials.email}
               onChange={handleChange}
               required
+              autoComplete="off"
               placeholder="you@example.com"
               className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
             />
@@ -245,7 +246,8 @@ const Signup = () => {
               value={credentials.password}
               onChange={handleChange}
               required
-              placeholder="••••••••"
+              autoComplete="off"
+              placeholder=""
               className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
             />
           </div>
@@ -257,8 +259,9 @@ const Signup = () => {
               name="confirmPassword"
               value={credentials.confirmPassword}
               onChange={handleChange}
+               autoComplete="off"
               required
-              placeholder="••••••••"
+              placeholder=""
               className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
             />
           </div>
